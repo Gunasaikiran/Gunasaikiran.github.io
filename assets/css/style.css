@@ -78,7 +78,16 @@
 .github:hover {
   background-color: black;
 }
-
+body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+.dark-mode {
+  background-color: black;
+  color: white;
+}
 /* Buttons - Read Me, Contact Us */
 
 .readme {
