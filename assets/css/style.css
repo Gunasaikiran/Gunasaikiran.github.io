@@ -1,35 +1,11 @@
-.profile-pic {
-  position: relative;
-  max-width:130px;
-  max-height:130px;
-  width: auto;
-  height: auto;
-  overflow: hidden;
-  /* display: inline-block; */
-  
-  
-  /* background-size: cover;  */
-  margin: -31px; 
-  margin-left:-7px;
-  border: 6px solid rgba(0, 77, 64, 0.4); 
-  border-radius: 50% !important;
+/* =========================
+   PROFILE / SIDEBAR
+   ========================= */
+.instagram,
+.scholar,
+.spotify {
+  background: #5B5FEF;
 }
-.instagram{
-    background:#E1306C;
-}
-
-.scholar{
-    background:#4285F4;
-}
-
-.spotify{
-    background:#1DB954;
-}
-.profile-pic img {
-  width: 100%;
-  height: auto;
-}
-
 .tracker {
   /* visibility: hidden; */
   position: fixed;
@@ -65,11 +41,11 @@
 }
 
 .linkedin {
-  color: #0077b5;
+  color: #5B5FEF;
 }
 
 .angellist {
-  color: grey;
+  color: #6B7280;
 }
 
 .icon-btn:hover {
@@ -77,16 +53,11 @@
   color: #FFFFFF;
 }
 
-.linkedin:hover {
-  background-color: #0077b5;
-}
-
-.angellist:hover {
-  background-color: grey;
-}
-
+.linkedin:hover,
+.angellist:hover,
 .github:hover {
-  background-color: black;
+  background-color: #5B5FEF;
+  color: #FFFFFF;
 }
 body {
   padding: 25px;
@@ -104,7 +75,7 @@ body {
   position: relative;
   padding: 11px 35px;
   background: #fff;
-  color: #00796b;
+  color: #5B5FEF;
   border: 2px solid #fff;
   font-weight: 600;
   font-size: 15px;
@@ -116,7 +87,7 @@ body {
 
 /* .readme:hover{
   color: white;
-  background-color: #00796b;
+  background-color: #5B5FEF;
 } */
 .social-links a{
     margin:10px;
@@ -142,7 +113,7 @@ body {
 }
 
 .contactme:hover{
-  color: #00796b;
+  color: #5B5FEF;
   background-color: white;
 }
 /* main body */
@@ -162,11 +133,21 @@ body {
 /* main a -- links */
 
 /* a {
-  color: #009688;
+  color: #5B5FEF;
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: #4338CA;
 } */
 
 a {
-  color: #004d40;
+  color: #5B5FEF;
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: #4338CA;
 }
 
 /* main blockqoute */
@@ -246,7 +227,7 @@ dt {
 }
 
 ul.side-nav {
-  width: 190px;
+  width: 180px;
 }
 
 ul.side-nav li {
@@ -255,32 +236,36 @@ ul.side-nav li {
 
 /* ul.side-nav.fixed a {
   box-sizing: content-box;
-  color: rgb(48, 122, 207);
+  color: #5B5FEF;
   display: block;
   line-height: 100%;
   padding: 10px 0 12px;
 } */
 
+/* Sidebar menu */
 ul.side-nav.fixed a {
   box-sizing: content-box;
-  color: rgb(16, 202, 56);
+  color: #5B5FEF;
   display: block;
   line-height: 100%;
-  padding: 10px 0 12px;
+  padding: 7px 0 9px;
+  transition: all 0.25s ease;
 }
 
-ul.table-of-contents li.logo a.active, ul.table-of-contents li.logo a:hover {
+ul.side-nav.fixed a:hover {
+  color: #4338CA;
+  transform: translateX(3px);
+}
+
+/* Logo / profile section */
+ul.table-of-contents li.logo a,
+ul.table-of-contents li.logo a.active,
+ul.table-of-contents li.logo a:hover {
   border: none;
   font-weight: 200;
+  padding: 0;
 }
 
-/* ul.side-nav.fixed li.logo {
-  background-color: #fafafa;
-  border-bottom: 1px solid #ddd;
-  box-sizing: content-box;
-  min-height: 90px;
-  padding: 30px 30px 40px;
-} */
 
 ul.side-nav.fixed li.logo {
   background-color: #fafafa;
@@ -295,9 +280,11 @@ ul.side-nav.fixed li.logo a {
   line-height: 100%;
 }
 
-ul.table-of-contents li:not(.logo) a.active, ul.table-of-contents li:not(.logo) a:hover {
-  background-color: #fafafa;
-  border-left: 3px solid;
+ul.table-of-contents li:not(.logo) a.active,
+ul.table-of-contents li:not(.logo) a:hover {
+  background-color: #EEF0FF;
+  border-left: 3px solid #5B5FEF;
+  color: #4338CA;
 }
 
 ul.side-nav.fixed.table-of-contents li:not(.logo) a span, ul#slide-out li:not(.logo) a span {
@@ -338,15 +325,10 @@ h3 {
   height: 100vh;
 }
 
-/* Original */
 
-/* #intro.section {
-  background: url(../../assets/img/white-ai-wallpaper.jpg) no-repeat top center/cover;
-  position: relative;
-} */
 
 #intro.section {
-  background: #a7ffeb repeat;
+  background: #EEF0FF repeat;
   position: relative;
 }
 
@@ -358,12 +340,7 @@ h3 {
   top: 0;
 }
 
-/* #intro.section .container *:not(span) {
-  font-weight: 300;
-  line-height: 150%;
-  padding: 0 30px;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-} */
+
 
 #intro.section .container *:not(span) {
   font-weight: 300;
@@ -374,7 +351,7 @@ h3 {
 }
 
 #intro.section .underline {
-  border-bottom: 5px solid #24305e;
+  border-bottom: 5px solid #4338CA;
 }
 
 #intro.section .teal {
@@ -410,7 +387,7 @@ h3 {
 .card li a {
   margin-right: 0;
   color: #333;
-  border-bottom: 2px solid #ffab40;
+  border-bottom: 2px solid #5B5FEF;
 }
 
 .card li a:hover {
@@ -495,11 +472,11 @@ a.hoverline {
 /* main a.hoverline */
 
 /* a.hoverline:hover {
-  border-bottom: 3px solid #24305e !important;
+  border-bottom: 3px solid #4338CA !important;
 } */
 
 a.hoverline:hover {
-  border-bottom: 3px solid #004d40 !important;
+  border-bottom: 3px solid #5B5FEF !important;
 }
 
 #skills .card.large {
@@ -569,27 +546,182 @@ small {
 }
 
 .grey-text {
-  color: #666 !important;
+  color: #6B7280 !important;
 }
 
 /* main .teal-text */
+/* =========================================
+   EXPERIENCE SECTION - 2 x 2 GRID
+   ========================================= */
 
+.experience-title {
+  background: #5B5FEF !important;
+}
+
+/* 2 cards per row */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  width: 92%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Individual experience card */
+.experience-card {
+  margin: 0 !important;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
+  border-top: 3px solid transparent;
+}
+
+/* Hover effect */
+.experience-card:hover {
+  transform: translateY(-5px);
+  border-top-color: #5B5FEF;
+  box-shadow: 0 10px 25px rgba(67, 56, 202, 0.15);
+}
+
+/* Card content */
+.experience-card .card-content {
+  padding: 25px 28px;
+}
+
+/* Company logo */
+.experience-logo {
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+
+.experience-logo img {
+  max-width: 120px;
+  max-height: 55px;
+  object-fit: contain;
+}
+
+/* Job title */
+.experience-card .card-title {
+  display: block;
+  font-size: 21px;
+  line-height: 1.35;
+  font-weight: 500;
+  margin-bottom: 7px;
+  color: #333;
+}
+
+/* Company name */
+.experience-card .company-name {
+  font-size: 15px;
+  color: #666;
+  margin: 4px 0;
+}
+
+/* Date */
+.experience-card .experience-date {
+  color: #5B5FEF;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 8px 0 18px;
+}
+
+/* Experience points */
+.experience-card ul {
+  margin: 0;
+  padding: 0;
+}
+
+.experience-card ul li {
+  font-size: 14px;
+  line-height: 1.65;
+  margin-bottom: 9px;
+  color: #444;
+}
+
+.experience-card ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* Highlight important text */
+.experience-card b {
+  color: #4338CA;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 850px) {
+
+  .experience-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    width: 94%;
+  }
+
+  .experience-card .card-content {
+    padding: 20px;
+  }
+
+  .experience-card .card-title {
+    font-size: 19px;
+  }
+
+  .experience-card ul li {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+    width: 90%;
+    gap: 20px;
+  }
+
+  .experience-card .card-content {
+    padding: 22px;
+  }
+
+  .experience-logo {
+    justify-content: center;
+  }
+
+  .experience-card .card-title,
+  .experience-card .company-name,
+  .experience-card .experience-date {
+    text-align: center;
+  }
+}
 .teal-text {
-  color: #008073 !important;
+  color: #5B5FEF !important;
 }
 
 /* .teal-text {
-  color: #0b5e86 !important;
+  color: #5B5FEF !important;
 } */
 
 /* .teal */
 
 .teal {
-  background-color: #008073 !important;
+  background-color: #5B5FEF !important;
 }
 
 /* .teal {
-  background-color: #00695c !important;
+  background-color: #4338CA !important;
 } */
 
 @media (min-width: 1200px) {
@@ -628,7 +760,7 @@ small {
     position: absolute;
   }
   nav a.button-collapse, nav a.button-collapse i {
-    color: #009688;
+    color: #5B5FEF;
     height: 56px;
     line-height: 56px;
   }
@@ -717,4 +849,401 @@ small {
   #intro.section {
     background-position-x: 30%;
   }
+}
+
+
+/* =========================================================
+   SKY BLUE POLISH
+   Keeps the original layout but gives the site one
+   consistent, modern cyan/sky-blue visual language.
+   ========================================================= */
+
+:root {
+  --sky-blue: #5B5FEF;
+  --sky-blue-dark: #4338CA;
+  --sky-blue-light: #EEF0FF;
+  --sky-blue-border: rgba(41, 182, 246, 0.30);
+  --text-main: #333333;
+  --text-muted: #666666;
+}
+
+/* Cleaner buttons */
+.readme {
+  color: var(--sky-blue-dark);
+  border: 2px solid var(--sky-blue);
+  transition: all 0.25s ease;
+}
+
+.readme:hover {
+  color: #FFFFFF;
+  background-color: var(--sky-blue);
+  border-color: var(--sky-blue);
+  transform: translateY(-2px);
+}
+
+.contactme {
+  border-color: var(--sky-blue);
+  color: #FFFFFF;
+  transition: all 0.25s ease;
+}
+
+.contactme:hover {
+  color: #FFFFFF;
+  background-color: var(--sky-blue);
+  border-color: var(--sky-blue);
+  transform: translateY(-2px);
+}
+
+/* Consistent accent for headings and interactive elements */
+.teal-text {
+  color: var(--sky-blue-dark) !important;
+}
+
+.teal {
+  background-color: var(--sky-blue) !important;
+}
+
+a.hoverline:hover {
+  border-bottom-color: var(--sky-blue) !important;
+}
+
+/* Sidebar */
+ul.side-nav.fixed a {
+  color: var(--sky-blue);
+}
+
+ul.side-nav.fixed li.logo {
+  border-bottom: 2px solid var(--sky-blue-border);
+}
+
+ul.side-nav.fixed.table-of-contents li:not(.logo) a span,
+ul#slide-out li:not(.logo) a span {
+  color: var(--text-main) !important;
+}
+
+ul.table-of-contents li:not(.logo) a.active,
+ul.table-of-contents li:not(.logo) a:hover {
+  background-color: var(--sky-blue-light);
+  border-left-color: var(--sky-blue);
+}
+
+/* Social icons */
+.icon-btn {
+  transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.github,
+.linkedin,
+.angellist {
+  color: var(--sky-blue-dark);
+}
+
+.github:hover,
+.linkedin:hover,
+.angellist:hover,
+.instagram:hover,
+.scholar:hover,
+.spotify:hover {
+  background-color: var(--sky-blue);
+  color: #FFFFFF;
+}
+
+/* Cards */
+.card {
+  border-radius: 8px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(3, 169, 244, 0.12);
+}
+
+.card li a {
+  border-bottom-color: var(--sky-blue);
+}
+
+#skills h4 {
+  border-bottom-color: var(--sky-blue-border);
+}
+
+#experience .card-content .row {
+  border-bottom-color: var(--sky-blue-border);
+}
+
+/* Intro section */
+#intro.section {
+  background: #EEF0FF repeat;
+}
+
+#intro.section .underline {
+  border-bottom-color: var(--sky-blue);
+}
+
+/* Quote accent */
+blockquote {
+  border-left-color: var(--sky-blue);
+  color: #5B6178;
+}
+
+/* Mobile menu icon */
+@media (max-width: 992px) {
+  nav a.button-collapse,
+  nav a.button-collapse i {
+    color: var(--sky-blue);
+  }
+}
+
+/* Better image appearance */
+.responsive-img {
+  border-radius: 6px;
+}
+
+/* Smooth page interactions */
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================================================
+   FINAL SIDEBAR FIX
+   ========================================================= */
+
+/* Give the logo/profile area its own predictable space. */
+ul.side-nav.fixed li.logo {
+  width: 180px;
+  height: 205px;
+  min-height: 0;
+  padding: 14px 0 8px 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border-bottom: 1px solid rgba(91, 95, 239, 0.16);
+  overflow: hidden;
+}
+
+/* Profile image stays completely inside the logo area. */
+ul.side-nav.fixed li.logo .profile-pic {
+  display: block;
+  width: 145px;
+  height: 145px;
+  margin: 0 auto 8px auto;
+  object-fit: cover;
+  border: 4px solid rgba(91, 95, 239, 0.28);
+  border-radius: 10px !important;
+  box-sizing: border-box;
+}
+
+/* Do not add extra padding/margins to the logo link. */
+ul.side-nav.fixed li.logo a,
+ul.side-nav.fixed li.logo a.active,
+ul.side-nav.fixed li.logo a:hover {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+/* Sidebar menu starts BELOW the profile area. */
+ul.side-nav.fixed li:not(.logo) {
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul.side-nav.fixed li:not(.logo) a {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 18px !important;
+  margin: 0;
+  box-sizing: border-box;
+  color: #5B5FEF;
+  border-left: 3px solid transparent;
+  transition: background-color 0.22s ease,
+              color 0.22s ease,
+              border-color 0.22s ease,
+              padding-left 0.22s ease;
+}
+
+ul.side-nav.fixed li:not(.logo) a:hover,
+ul.side-nav.fixed li:not(.logo) a.active {
+  color: #4338CA;
+  background: #EEF0FF;
+  border-left: 3px solid #5B5FEF;
+  padding-left: 21px !important;
+}
+
+/* Keep menu text readable rather than forcing it to be blue. */
+ul.side-nav.fixed li:not(.logo) a span,
+ul#slide-out li:not(.logo) a span {
+  color: #333333 !important;
+}
+
+/* Sidebar icons use the accent color. */
+ul.side-nav.fixed li:not(.logo) i {
+  color: #5B5FEF;
+  transition: color 0.22s ease;
+}
+
+ul.side-nav.fixed li:not(.logo) a:hover i,
+ul.side-nav.fixed li:not(.logo) a.active i {
+  color: #4338CA;
+}
+
+/* Desktop sidebar width matches the actual content area. */
+ul.side-nav {
+  width: 180px;
+}
+
+main {
+  padding-left: 180px;
+}
+
+/* Slightly softer overall page accent. */
+a {
+  color: #5B5FEF;
+}
+
+a:hover {
+  color: #4338CA;
+}
+
+.teal-text {
+  color: #5B5FEF !important;
+}
+
+.teal {
+  background-color: #5B5FEF !important;
+}
+
+a.hoverline:hover {
+  border-bottom-color: #5B5FEF !important;
+}
+
+.readme {
+  color: #4338CA;
+  border-color: #5B5FEF;
+}
+
+.readme:hover {
+  color: #FFFFFF;
+  background-color: #5B5FEF;
+}
+
+.contactme {
+  border-color: #5B5FEF;
+}
+
+.contactme:hover {
+  color: #FFFFFF;
+  background-color: #5B5FEF;
+}
+
+.card li a {
+  border-bottom-color: #5B5FEF;
+}
+
+#skills h4,
+#experience .card-content .row {
+  border-bottom-color: rgba(91, 95, 239, 0.18);
+}
+
+blockquote {
+  border-left-color: #5B5FEF;
+}
+
+#intro.section {
+  background: #EEF0FF repeat;
+}
+
+#intro.section .underline {
+  border-bottom-color: #5B5FEF;
+}
+
+/* Mobile: release the desktop sidebar width/padding. */
+@media (max-width: 992px) {
+  main {
+    padding-left: 0;
+  }
+
+  ul.side-nav.fixed li.logo {
+    width: 100%;
+    height: auto;
+    padding: 15px 0 10px;
+  }
+
+  ul.side-nav.fixed li.logo .profile-pic {
+    width: 140px;
+    height: 140px;
+  }
+
+  ul.side-nav.fixed li:not(.logo),
+  ul.side-nav.fixed li:not(.logo) a {
+    height: 50px;
+  }
+}
+
+/* =========================================================
+   HOMEPAGE SOCIAL ICONS — ORIGINAL BRAND COLORS
+   ========================================================= */
+
+/* Instagram */
+.instagram {
+  background: #E1306C !important;
+  color: #FFFFFF !important;
+}
+
+/* Google Scholar */
+.scholar {
+  background: #4285F4 !important;
+  color: #FFFFFF !important;
+}
+
+/* Spotify */
+.spotify {
+  background: #1DB954 !important;
+  color: #FFFFFF !important;
+}
+
+/* GitHub */
+.github {
+  color: #181717 !important;
+}
+
+.github:hover {
+  background-color: #181717 !important;
+  color: #FFFFFF !important;
+}
+
+/* LinkedIn */
+.linkedin {
+  color: #0077B5 !important;
+}
+
+.linkedin:hover {
+  background-color: #0077B5 !important;
+  color: #FFFFFF !important;
+}
+
+/* AngelList */
+.angellist {
+  color: #777777 !important;
+}
+
+.angellist:hover {
+  background-color: #777777 !important;
+  color: #FFFFFF !important;
+}
+
+/* Keep the other homepage icon hover animations */
+.icon-btn {
+  transition: transform 0.25s ease, background-color 0.25s ease,
+              color 0.25s ease;
+}
+
+.icon-btn:hover {
+  transform: scale(1.10);
 }
