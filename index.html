@@ -276,7 +276,7 @@ dialog.sheet p{margin:0 0 1rem;color:var(--muted);font-size:.95rem}
       <li style="--i:3"><a href="https://scholar.google.com/citations?hl=en&user=0Ulo0DEAAAAJ" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg><span>Scholar</span></a></li>
       <li style="--i:4"><a class="ig" href="https://www.instagram.com/_sunny_insta_/" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="3"/><circle cx="12" cy="13.5" r="3.5"/><path d="M8 7l1.5-2.5h5L16 7"/></svg><span>Instagram</span></a></li>
       <li style="--i:5"><a class="sp" href="https://open.spotify.com/user/315khdjrqetch7t7s4nhc6izwxxe" target="_blank" rel="noopener"><span class="eqi" aria-hidden="true"><i></i><i></i><i></i></span><span>Spotify</span></a></li>
-      <li style="--i:6"><a href="https://drive.google.com/file/d/1B6MZ1z0-7NsefC3Lm_q-uhib28MTqpE9/view?usp=sharing" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></svg><span>Résumé</span></a></li>
+      <li style="--i:6"><a href="https://drive.google.com/file/d/15hzu-c6VJFMgPH05AZyFEvEBomDTQVJX/view?usp=sharing" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></svg><span>Résumé</span></a></li>
     </ul>
   </div>
 </header>
@@ -342,6 +342,14 @@ dialog.sheet p{margin:0 0 1rem;color:var(--muted);font-size:.95rem}
         <svg class="ring" viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="34" class="bg"/><circle cx="40" cy="40" r="34" class="fg" style="--p:.825" transform="rotate(-90 40 40)"/><text x="40" y="46" text-anchor="middle">8.25</text></svg>
         <div><h3>IIIT Nagpur</h3><p>B.Tech, ECE.</p></div>
       </div>
+      <div class="school">
+        <svg class="ring" viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="34" class="bg"/><circle cx="40" cy="40" r="34" class="fg" style="--p:.98" transform="rotate(-90 40 40)"/><text x="40" y="46" text-anchor="middle">9.8</text></svg>
+        <div><h3>Tirumala Junior College</h3><p>Intermediate, MPC. Rajahmundry.</p></div>
+      </div>
+      <div class="school">
+        <svg class="ring" viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="34" class="bg"/><circle cx="40" cy="40" r="34" class="fg" style="--p:.98" transform="rotate(-90 40 40)"/><text x="40" y="46" text-anchor="middle">9.8</text></svg>
+        <div><h3>Bhashyam Public School</h3><p>Class 10. Mandapeta.</p></div>
+      </div>
     </div>
   </section>
 
@@ -399,6 +407,8 @@ dialog.sheet p{margin:0 0 1rem;color:var(--muted);font-size:.95rem}
 </dialog>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
+/* Older browsers lack roundRect, which the animations use; draw it by hand there */
+if(!CanvasRenderingContext2D.prototype.roundRect){CanvasRenderingContext2D.prototype.roundRect=function(x,y,w,h,r){r=Math.min(typeof r==='number'?r:0,w/2,h/2);this.moveTo(x+r,y);this.arcTo(x+w,y,x+w,y+h,r);this.arcTo(x+w,y+h,x,y+h,r);this.arcTo(x,y+h,x,y,r);this.arcTo(x,y,x+w,y,r);this.closePath();};}
 /* ---------- Places ----------
    kind: home (home town), study, now (study + work), trip.
    To add a place: copy a trip line and change name, tags, state, lat, lon. lbl = label side: l, r, t or b. */
